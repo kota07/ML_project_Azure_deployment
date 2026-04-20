@@ -29,8 +29,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Restart Web App to pull new image
+      - name: Restart Web App
         run: |
           az webapp restart \
-            --name <YOUR_WEBAPP_NAME> \
-            --resource-group <YOUR_RESOURCE_GROUP>
+            --name testdockertejacheck \
+            --resource-group testdockerteja
